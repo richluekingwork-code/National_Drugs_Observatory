@@ -1,0 +1,17 @@
+export const COUNTIES = [
+  { value: "bomi", label: "Bomi" },
+  { value: "bong", label: "Bong" },
+  { value: "gbarpolu", label: "Gbarpolu" },
+  { value: "grand_bassa", label: "Grand Bassa" },
+  { value: "grand_cape_mount", label: "Grand Cape Mount" },
+  { value: "grand_gedeh", label: "Grand Gedeh" },
+  { value: "grand_kru", label: "Grand Kru" },
+  { value: "lofa", label: "Lofa" },
+  { value: "margibi", label: "Margibi" },
+  { value: "maryland", label: "Maryland" },
+  { value: "montserrado", label: "Montserrado" },
+  { value: "nimba", label: "Nimba" },
+  { value: "river_cess", label: "River Cess" },
+  { value: "river_gee", label: "River Gee" },
+  { value: "sinoe", label: "Sinoe" },
+];

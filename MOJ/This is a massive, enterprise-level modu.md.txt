@@ -1,0 +1,17 @@
+This is a massive, enterprise-level module you are asking for. It includes court filings, hearings, legal reviews, LDEA information requests, and fine management.
+
+Because we must integrate this into your existing system without breaking the LDEA data, we need to do this step-by-step.
+
+I cannot give you the entire system in one message without it breaking, so we will do this in phases:
+
+Phase 1: The Backend Database Models
+We need to create the new MOJ models and link them to the existing LDEA Cases model.
+
+Phase 2: Backend APIs (Serializers & Views)
+We will build the endpoints to create and update these new records.
+
+Phase 3: The Frontend Workspace (Tabs)
+We will turn MOJCaseDetailPage.jsx into a tabbed workspace (Legal Review, Court, Fines, etc.).
+
+Phase 4: The Dashboard
+We will build the summary KPI cards.
