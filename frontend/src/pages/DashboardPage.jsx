@@ -3,7 +3,7 @@ import { lazy, Suspense, useMemo } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "./../contexts/AuthContext";
 import { useRoles } from "./../hooks/useRoles";
-import { PageSpinner } from "./ldea/seizures/SeizureDetailPage";
+import { PageSpinner } from "./ldea/Seizures/SeizureDetailPage";
 
 const LdeaAnalyticsPage = lazy(() => import("./ldea/analytics/AnalyticsPage"));
 const MogAnalyticsPage = lazy(() => import("./mog/analytics/AnalyticsPage"));

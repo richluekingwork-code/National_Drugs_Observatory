@@ -11,8 +11,8 @@ import { useAuth } from "../../../contexts/AuthContext"
 import { ldeaService } from "../../../services/ldeaService";
 import { mogService } from "../../../services/mogService";
 import { mohService } from "../../../services/mohService";
-import { PageSpinner, PageError } from "../seizures/SeizureDetailPage";
-import { StatusBadge } from "../seizures/SeizuresPage";
+import { PageSpinner, PageError } from "../Seizures/SeizureDetailPage";
+import { StatusBadge } from "../Seizures/SeizuresPage";
 
 /* ------------------------------------------------------------------ */
 /* Helpers                                                             */

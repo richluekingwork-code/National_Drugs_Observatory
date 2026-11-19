@@ -17,19 +17,19 @@ import AuditLogPage from "./pages/admin/AuditLogPage";
 import SuperAdminPage from "./pages/admin/SuperAdminPage";
 
 // LDEA Imports
-import SeizuresPage from "./pages/ldea/seizures/SeizuresPage";
-import SeizureDetailPage from "./pages/ldea/seizures/SeizureDetailPage";
-import SeizureFormPage from "./pages/ldea/seizures/SeizureFormPage";
-import PersonsPage from "./pages/ldea/persons/PersonsPage";
-import PersonDetailPage from "./pages/ldea/persons/PersonDetailPage";
-import PersonFormPage from "./pages/ldea/persons/PersonFormPage";
-import PersonTimelinePage from "./pages/ldea/persons/PersonTimeLinePage";
+import SeizuresPage from "./pages/ldea/Seizures/SeizuresPage";
+import SeizureDetailPage from "./pages/ldea/Seizures/SeizureDetailPage";
+import SeizureFormPage from "./pages/ldea/Seizures/SeizureFormPage";
+import PersonsPage from "./pages/ldea/Persons/PersonsPage";
+import PersonDetailPage from "./pages/ldea/Persons/PersonDetailPage";
+import PersonFormPage from "./pages/ldea/Persons/PersonFormPage";
+import PersonTimelinePage from "./pages/ldea/Persons/PersonTimeLinePage";
 import ArrestsPage from "./pages/ldea/arrests/ArrestsPage";
 import ArrestDetailPage from "./pages/ldea/arrests/ArrestDetailPage";
 import ArrestFormPage from "./pages/ldea/arrests/ArrestFormPage";
-import VictimHistoriesPage from "./pages/ldea/victimHistory/VictimHistoriesPage";
+import VictimHistoriesPage from "./pages/ldea/VictimHistory/VictimHistoriesPage";
 import VictimDetailPage from "./pages/ldea/VictimHistory/VictimDetailPage";
-import VictimHistoryFormPage from "./pages/ldea/victimHistory/VictimHistoryFormPage";
+import VictimHistoryFormPage from "./pages/ldea/VictimHistory/VictimHistoryFormPage";
 import CasesPage from "./pages/ldea/cases/CasesPage";
 import CaseDetailPage from "./pages/ldea/cases/CaseDetailPage";
 import CaseFormPage from "./pages/ldea/cases/CaseFormPage";

@@ -6,8 +6,8 @@ import {
 import { useResource } from "../../../hooks/useResource";
 import { useRoles } from "../../../hooks/useRoles";
 import { ldeaService } from "../../../services/ldeaService";
-import { PageSpinner, PageError } from "../seizures/SeizureDetailPage";
-import { StatusBadge } from "../seizures/SeizuresPage";
+import { PageSpinner, PageError } from "../Seizures/SeizureDetailPage";
+import { StatusBadge } from "../Seizures/SeizuresPage";
 
 const ROLE_ORDER = ["suspect", "victim", "witness"];
 const ROLE_LABEL = { suspect: "Suspects", victim: "Victims", witness: "Witnesses" };

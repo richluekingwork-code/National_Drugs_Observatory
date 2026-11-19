@@ -5,8 +5,8 @@ import { useResource } from "../../../hooks/useResource";
 import { useResourceMutation } from "../../../hooks/useResourceMutation";
 import { useRoles } from "../../../hooks/useRoles";
 import { ldeaService } from "../../../services/ldeaService";
-import { PageSpinner, PageError, ConfirmDialog } from "../seizures/SeizureDetailPage";
-import { StatusBadge } from "../seizures/SeizuresPage";
+import { PageSpinner, PageError, ConfirmDialog } from "../Seizures/SeizureDetailPage";
+import { StatusBadge } from "../Seizures/SeizuresPage";
 import {
   Breadcrumb, HeaderActions, DetailHeader, FactStrip, Fact,
   DetailCard, DetailList, DetailRow, EmptyNote,

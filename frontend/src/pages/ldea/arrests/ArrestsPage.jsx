@@ -3,7 +3,7 @@ import { Pencil } from "lucide-react";
 import ResourceIndex from "../../../components/ldea/ResourceIndex";
 import { ldeaService } from "../../../services/ldeaService";
 import { useRoles } from "../../../hooks/useRoles";
-import { StatusBadge } from "../seizures/SeizuresPage";
+import { StatusBadge } from "../Seizures/SeizuresPage";
 import { COUNTY_OPTIONS } from "../../../constants/counties"; // <--- IMPORT ADDED
 
 // Generate years for the dropdown (Current year down to 10 years ago)

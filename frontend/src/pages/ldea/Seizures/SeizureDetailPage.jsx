@@ -10,7 +10,7 @@ import {
   Breadcrumb, HeaderActions, DetailHeader, FactStrip, Fact,
   DetailCard, DetailList, DetailRow,
   formatDate, formatTime,
-} from "../../../components/ldea/detail";
+} from "../../../components/ldea/Detail";
 
 export default function SeizureDetailPage() {
   const { id } = useParams();
