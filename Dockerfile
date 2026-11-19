@@ -3,7 +3,7 @@ FROM python:3.12-slim
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
-    DJANGO_SETTINGS_MODULE=national_drug_obs.settings
+    DJANGO_SETTINGS_MODULE=NDO.settings
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
@@ -21,4 +21,4 @@ RUN python manage.py collectstatic --noinput
 
 EXPOSE 8080
 
-CMD python manage.py migrate --noinput 2>&1; gunicorn national_drug_obs.wsgi:application --bind 0.0.0.0:$PORT --workers 4 --timeout 120 --access-logfile - --error-logfile -
+CMD ["sh", "-c", "python manage.py migrate --noinput && exec gunicorn NDO.wsgi:application --bind 0.0.0.0:${PORT:-8080} --workers 4 --timeout 120 --access-logfile - --error-logfile -"]
