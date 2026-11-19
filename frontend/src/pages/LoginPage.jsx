@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import AuthLayout from "../components/auth/AuthLayout";
 import LoginForm from "../components/auth/LoginForm";
+import PilotQuickLogin from "../components/auth/PilotQuickLogin";
 import { useAuth } from "../contexts/AuthContext";
+
+// PILOT ONLY: set VITE_PILOT_LOGIN="false" at build time to hide the panel.
+const SHOW_PILOT_LOGIN = import.meta.env.VITE_PILOT_LOGIN !== "false";
 
 /**
  * Accepts a `next` query parameter and validates it as a safe,
@@ -50,6 +54,8 @@ export default function LoginPage() {
           </div>
         )}
       <LoginForm onSuccess={handleSuccess} />
+
+      {SHOW_PILOT_LOGIN && <PilotQuickLogin onSuccess={handleSuccess} />}
 
       <p className="mt-8 text-center text-[11px] text-base-content/40">
         Authorized personnel only. All activity is logged.
