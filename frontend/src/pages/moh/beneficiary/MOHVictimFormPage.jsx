@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { FormSection, FormActions, Field, SelectField, TextareaField } from "../../../components/ldea/fields";
@@ -73,7 +73,7 @@ export default function MOHVictimFormPage() {
     incident_date: "",
     incident_time: "",
     incident_location: "",
-    incident_county: countyOptions.length === 1 ? countyOptions[0].value : "",
+    incident_county: allowedCounties.length === 1 ? allowedCounties[0].value : "",
     
     // Personal Info
     first_name: "",
@@ -84,7 +84,7 @@ export default function MOHVictimFormPage() {
     date_of_birth: "",
     phone_number: "",
     email: "",
-    county_resident: countyOptions.length === 1 ? countyOptions[0].value : "",
+    county_resident: allowedCounties.length === 1 ? allowedCounties[0].value : "",
     district: "",
     address: "",
     professional_status: "",
@@ -114,10 +114,10 @@ export default function MOHVictimFormPage() {
     remarks: "",
   });
   useEffect(() => {
-      if (countyOptions.length === 1) {
-        setForm((f) => (f.county_resident ? f : { ...f, county_resident: countyOptions[0].value }));
+      if (allowedCounties.length === 1) {
+        setForm((f) => (f.county_resident ? f : { ...f, county_resident: allowedCounties[0].value }));
       }
-      }, [countyOptions])
+      }, [allowedCounties])
   
   const [fieldErrors, setFieldErrors] = useState({});
   const [formError, setFormError] = useState(null);
