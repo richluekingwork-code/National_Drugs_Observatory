@@ -1629,7 +1629,7 @@ export default function MOYSBeneficiaryDetailPage() {
 
           <div className="rounded-md border border-base-300 bg-base-200/40 p-3 text-xs text-base-content/70">
             <p className="font-semibold uppercase tracking-wider text-[10px] mb-2">Current Record</p>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div><span className="text-base-content/50">Name:</span> {[person.first_name, person.middle_name, person.last_name].filter(Boolean).join(" ") || "—"}</div>
               <div><span className="text-base-content/50">ID:</span> {person.id ?? "—"}</div>
               <div><span className="text-base-content/50">Phone:</span> {fmt(person.phone_number)}</div>

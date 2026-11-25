@@ -368,7 +368,7 @@ export default function MOJCaseDetailPage() {
                         <div className="p-5 space-y-5">
                           <div>
                             <h4 className="text-xs font-bold text-base-content/50 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Personal Details</h4>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                               <div><p className="text-[10px] text-base-content/50 uppercase">Gender</p><p className="font-medium capitalize text-sm">{person.gender || "—"}</p></div>
                               <div><p className="text-[10px] text-base-content/50 uppercase">Date of Birth</p><p className="font-medium text-sm">{person.date_of_birth || "—"}</p></div>
                               <div><p className="text-[10px] text-base-content/50 uppercase">Nationality</p><p className="font-medium text-sm">{person.nationality || "—"}</p></div>
@@ -379,7 +379,7 @@ export default function MOJCaseDetailPage() {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                               <h4 className="text-xs font-bold text-base-content/50 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Contact</h4>
-                              <div className="grid grid-cols-2 gap-2">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 <div><p className="text-[10px] text-base-content/50 uppercase">Phone</p><p className="font-medium text-sm">{person.phone_number || "—"}</p></div>
                                 <div><p className="text-[10px] text-base-content/50 uppercase">Email</p><p className="font-medium text-sm">{person.email || "—"}</p></div>
                                 <div className="col-span-2"><p className="text-[10px] text-base-content/50 uppercase">Address</p><p className="font-medium text-sm">{person.address || "—"}</p></div>
@@ -387,7 +387,7 @@ export default function MOJCaseDetailPage() {
                             </div>
                             <div>
                               <h4 className="text-xs font-bold text-base-content/50 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Arrest Location</h4>
-                              <div className="grid grid-cols-2 gap-2">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                 <div><p className="text-[10px] text-base-content/50 uppercase">County</p><p className="font-medium text-sm capitalize">{person.county_of_arrests || "—"}</p></div>
                                 <div><p className="text-[10px] text-base-content/50 uppercase">District</p><p className="font-medium text-sm capitalize">{person.district_of_arrests || "—"}</p></div>
                                 <div className="col-span-2"><p className="text-[10px] text-base-content/50 uppercase">Specific Location</p><p className="font-medium text-sm">{person.location_of_arrests || "—"}</p></div>
@@ -397,7 +397,7 @@ export default function MOJCaseDetailPage() {
 
                           <div>
                             <h4 className="text-xs font-bold text-base-content/50 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Arrest Specifics</h4>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-base-200/30 p-3 rounded-lg">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 bg-base-200/30 p-3 rounded-lg">
                               <div><p className="text-[10px] text-base-content/50 uppercase">Drug Type</p><p className="font-bold text-error capitalize text-sm">{person.drug_type || "—"}</p></div>
                               <div><p className="text-[10px] text-base-content/50 uppercase">Quantity</p><p className="font-medium text-sm">{person.quantity ? `${person.quantity} ${person.unit}` : "—"}</p></div>
                               <div><p className="text-[10px] text-base-content/50 uppercase">Arresting Officer</p><p className="font-medium text-sm">{person.arresting_officer || "—"}</p></div>
@@ -694,7 +694,7 @@ export default function MOJCaseDetailPage() {
               <form onSubmit={submitHearing} className="rounded-xl border border-t-4 border-base-300 border-t-primary bg-base-100 p-5 shadow-sm space-y-4 sticky top-6">
                 <h2 className="text-lg font-bold border-b border-base-200 pb-2">Schedule Hearing</h2>
                 <div><label className="label text-xs font-semibold">Court Case</label><select className="select select-bordered w-full" value={hearingForm.court_case} onChange={e => setHearingForm({...hearingForm, court_case: e.target.value})} required>{courtCases.map(c => <option key={c.id} value={c.id}>{c.court_case_number}</option>)}</select></div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div><label className="label text-xs font-semibold">Date</label><input type="date" className="input input-bordered w-full" value={hearingForm.hearing_date} onChange={e => setHearingForm({...hearingForm, hearing_date: e.target.value})} required /></div>
                   <div><label className="label text-xs font-semibold">Time</label><input type="time" className="input input-bordered w-full" value={hearingForm.hearing_time} onChange={e => setHearingForm({...hearingForm, hearing_time: e.target.value})} /></div>
                 </div>
@@ -741,7 +741,7 @@ export default function MOJCaseDetailPage() {
                         <h4 className="font-bold text-error flex items-center gap-2"><DollarSign className="size-4" /> Fine Imposed</h4>
                         <span className="text-lg font-bold">{orderFine.currency} {orderFine.total_amount}</span>
                       </div>
-                      <div className="grid grid-cols-2 gap-4 pt-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                         <div>
                           <p className="text-xs text-base-content/60 uppercase font-bold">Outstanding Balance</p>
                           <p className="text-xl font-bold text-error">{orderFine.currency} {orderFine.outstanding_balance}</p>
@@ -768,7 +768,7 @@ export default function MOJCaseDetailPage() {
               <form onSubmit={submitOrder} className="rounded-xl border border-t-4 border-base-300 border-t-primary bg-base-100 p-5 shadow-sm space-y-4">
                 <h2 className="text-lg font-bold border-b border-base-200 pb-2">Record Judgment</h2>
                 <div><label className="label text-xs font-semibold">Court Case</label><select className="select select-bordered w-full" value={orderForm.court_case} onChange={e => setOrderForm({...orderForm, court_case: e.target.value})} required>{courtCases.map(c => <option key={c.id} value={c.id}>{c.court_case_number}</option>)}</select></div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div><label className="label text-xs font-semibold">Outcome</label><select className="select select-bordered w-full" value={orderForm.judgment_type} onChange={e => setOrderForm({...orderForm, judgment_type: e.target.value})}>{JUDGMENT_TYPES.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}</select></div>
                   <div><label className="label text-xs font-semibold">Date</label><input type="date" className="input input-bordered w-full" value={orderForm.date_issued} onChange={e => setOrderForm({...orderForm, date_issued: e.target.value})} required /></div>
                 </div>

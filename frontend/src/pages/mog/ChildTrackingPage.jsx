@@ -206,7 +206,7 @@ export default function ChildTrackingPage() {
               <TextArea label="Additional information" name="additional_information" value={form.additional_information} onChange={change} />
               <TextArea label="Recommended next steps" name="recommended_next_steps" value={form.recommended_next_steps} onChange={change} />
               <TextArea label="Referral to services / support" name="referral_to_services" value={form.referral_to_services} onChange={change} />
-              <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm sm:grid-cols-3">
                 {[["gbv_services","GBV services"],["health","Health"],["mental_health","Mental health"],["ftr","FTR"],["alternative_care","Alternative care"]].map(([name,label]) =>
                   <label key={name} className="flex items-center gap-2"><input type="checkbox" name={name} checked={form[name]} onChange={change} />{label}</label>)}
               </div>

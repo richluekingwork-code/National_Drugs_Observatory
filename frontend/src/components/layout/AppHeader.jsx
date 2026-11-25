@@ -60,12 +60,14 @@ export default function AppHeader({
           )}
 
           {currentMembership && (
-            <ScopeBadge membership={currentMembership} />
+            <span className="hidden md:block">
+              <ScopeBadge membership={currentMembership} />
+            </span>
           )}
 
-          <div className="h-7 w-px bg-base-300" aria-hidden="true" />
+          <div className="hidden h-7 w-px bg-base-300 sm:block" aria-hidden="true" />
           <ThemeToggle />
-          <div className="h-7 w-px bg-base-300" aria-hidden="true" />
+          <div className="hidden h-7 w-px bg-base-300 sm:block" aria-hidden="true" />
           <UserMenu />
         </div>
       </div>

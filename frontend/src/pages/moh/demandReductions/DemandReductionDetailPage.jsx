@@ -330,7 +330,7 @@ export default function DemandReductionDetailPage() {
 
               <div className="grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <Block id="treatment" icon={Activity} title="Treatment details" tone="primary">
-                  <dl className="grid grid-cols-2 gap-3">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <Field label="Facility" value={record.treatment_facility} />
                     <Field label="Type of treatment" value={record.type_of_treatment} />
                     <Field label="Cases" value={record.cases} />
@@ -339,7 +339,7 @@ export default function DemandReductionDetailPage() {
                 </Block>
 
                 <Block id="clinical" icon={FileText} title="Clinical information" tone="warning">
-                  <dl className="grid grid-cols-2 gap-3">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <Field label="Injection substance" value={record.injection_substance} />
                     <Field label="Route" value={record.route_of_administration} />
                     <Field label="Psychotherapeutic" value={record.psychotherapeutic_intervention} />
@@ -350,7 +350,7 @@ export default function DemandReductionDetailPage() {
                 </Block>
 
                 <Block id="referral" icon={MapPin} title="Referral and location" tone="info">
-                  <dl className="grid grid-cols-2 gap-3">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <Field label="Receiving facility" value={record.receiving_facility_name} />
                     <Field label="Admission status" value={record.admission_status} />
                     <Field label="Referred from" value={record.refer_from} />

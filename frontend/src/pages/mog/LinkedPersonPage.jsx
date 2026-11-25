@@ -191,8 +191,8 @@ export default function LinkedPersonPage() {
               <h2 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                 <User className="size-3.5" /> Demographics
               </h2>
-              <dl className="grid grid-cols-2 gap-y-3 gap-x-4">
-                <div className="col-span-2 grid grid-cols-3 gap-2 pb-2 mb-1 border-b border-base-200">
+              <dl className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
+                <div className="col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-2 pb-2 mb-1 border-b border-base-200">
                   <Row label="First Name" value={fmt(p.first_name)} />
                   <Row label="Middle Name" value={fmt(p.middle_name)} />
                   <Row label="Last Name" value={fmt(p.last_name)} />
@@ -239,7 +239,7 @@ export default function LinkedPersonPage() {
             {activeTab === "overview" ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Panel icon={MapPin} title="Incident Details">
-                  <dl className="grid grid-cols-2 gap-y-4 gap-x-4">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4">
                     <Row label="Incident Date" value={fmtDate(p.incident_date)} />
                     <Row label="Time" value={fmt(p.incident_time)} />
                     <Row label="Location" value={fmt(p.incident_location)} />
@@ -248,7 +248,7 @@ export default function LinkedPersonPage() {
                 </Panel>
 
                 <Panel icon={Pill} title="Substance Use Profile">
-                  <dl className="grid grid-cols-2 gap-y-4 gap-x-4">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4">
                     <Row label="Primary Drug" value={fmt(p.type_of_drug_used)} />
                     <Row label="Frequency" value={fmt(p.frequency_of_use)} />
                     <Row label="Method" value={fmt(p.method_of_use)} />
@@ -259,7 +259,7 @@ export default function LinkedPersonPage() {
                 </Panel>
 
                 <Panel icon={ShieldAlert} title="Health & History">
-                  <dl className="grid grid-cols-2 gap-y-4 gap-x-4">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4">
                     <Row label="Overdose History" value={fmt(p.overdose_history)} />
                     <Row label="Overdose Count" value={fmt(p.overdose_count)} />
                     <Row label="Mental Health" value={fmt(p.mental_health_issues)} />
@@ -269,7 +269,7 @@ export default function LinkedPersonPage() {
                 </Panel>
 
                 <Panel icon={Globe} title="Location & Background">
-                  <dl className="grid grid-cols-2 gap-y-4 gap-x-4">
+                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4">
                     <Row label="County Resident" value={fmt(p.county_resident)} />
                     <Row label="District" value={fmt(p.district)} />
                     <Row label="Education" value={fmt(p.educational_level)} />
@@ -334,7 +334,7 @@ export default function LinkedPersonPage() {
                           <div className="p-4 space-y-6 text-sm">
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Basic & Eligibility</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Eligibility Met" value={fmt(r.case_meets_eligibility)} />
                                 <Row label="Consent Given" value={fmt(r.consent_assent_completed)} />
                                 <Row label="Reporting Agency" value={fmt(r.reporting_agency)} />
@@ -346,7 +346,7 @@ export default function LinkedPersonPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Father</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                   <Row label="Name" value={fmt(r.father_name)} />
                                   <Row label="Status" value={fmt(r.father_status)} />
                                   <Row label="DOB" value={fmtDate(r.father_date_of_birth)} />
@@ -359,7 +359,7 @@ export default function LinkedPersonPage() {
                               </div>
                               <div>
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Mother</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                   <Row label="Name" value={fmt(r.mother_name)} />
                                   <Row label="Status" value={fmt(r.mother_status)} />
                                   <Row label="DOB" value={fmtDate(r.mother_date_of_birth)} />
@@ -374,7 +374,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Care Arrangement</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                 <Row label="Arrangement Type" value={fmt(r.care_arrangement)} />
                                 <Row label="Caregiver Name" value={fmt(r.care_full_names)} />
                                 <Row label="DOB" value={fmtDate(r.care_date_birth)} />
@@ -413,7 +413,7 @@ export default function LinkedPersonPage() {
 
                             <div className="pt-4 border-t border-base-200">
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3">Staff Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-base-content/60">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-base-content/60">
                                 <div>Professional: <strong className="block text-base-content/80 mt-0.5">{fmt(r.professional_name)}</strong></div>
                                 <div>Cell: <strong className="block text-base-content/80 mt-0.5">{fmt(r.professional_cell)}</strong></div>
                                 <div>Supervisor: <strong className="block text-base-content/80 mt-0.5">{fmt(r.supervisor_name)}</strong></div>
@@ -454,7 +454,7 @@ export default function LinkedPersonPage() {
                           <div className="p-4 space-y-6 text-sm">
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Visit Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Visit #" value={fmt(r.visit_number)} />
                                 <Row label="Date" value={fmtDate(r.visit_date)} />
                                 <Row label="Child Seen" value={fmt(r.child_seen)} />
@@ -469,7 +469,7 @@ export default function LinkedPersonPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Location</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                   <Row label="House" value={fmt(r.location_house)} />
                                   <Row label="Street" value={fmt(r.street)} />
                                   <Row label="Town" value={fmt(r.town)} />
@@ -480,7 +480,7 @@ export default function LinkedPersonPage() {
                               </div>
                               <div>
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Caregiver</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                   <Row label="Name" value={fmt(r.caregiver_name)} />
                                   <Row label="Relationship" value={fmt(r.caregiver_relationship)} />
                                   <Row label="Contact" value={fmt(r.contact_number)} />
@@ -511,7 +511,7 @@ export default function LinkedPersonPage() {
 
                             <div className="pt-4 border-t border-base-200">
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3">Caseworker</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-base-content/60">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-base-content/60">
                                 <div>Name: <strong className="block text-base-content/80 mt-0.5">{fmt(r.caseworker_name)}</strong></div>
                                 <div>Agency: <strong className="block text-base-content/80 mt-0.5">{fmt(r.agency)}</strong></div>
                                 <div>Signature: <strong className="block text-base-content/80 mt-0.5">{fmt(r.signature)}</strong></div>
@@ -550,7 +550,7 @@ export default function LinkedPersonPage() {
                           <div className="p-4 space-y-6 text-sm">
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Basic & Family History</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Separated Child" value={fmt(r.separated_child)} />
                                 <Row label="Mother" value={fmt(r.mother_name)} />
                                 <Row label="Mother Alive" value={fmt(r.mother_alive)} />
@@ -563,7 +563,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Address Before Separation</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                 <Row label="House" value={fmt(r.house_location)} />
                                 <Row label="Street" value={fmt(r.street)} />
                                 <Row label="Town" value={fmt(r.town)} />
@@ -594,7 +594,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Traced Family Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                 <Row label="Traced Person" value={fmt(r.traced_person_name)} />
                                 <Row label="Age" value={fmt(r.traced_person_age)} />
                                 <Row label="Gender" value={fmt(r.traced_person_gender)} />
@@ -663,7 +663,7 @@ export default function LinkedPersonPage() {
                           <div className="p-4 space-y-6 text-sm">
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Verification & Reunification</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Adult Verified" value={fmt(r.adult_verification)} />
                                 <Row label="Child Verified" value={fmt(r.child_verification)} />
                                 <Row label="Relationship Verified" value={fmt(r.relationship_verified)} />
@@ -675,7 +675,7 @@ export default function LinkedPersonPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Caregiver 1</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                   <Row label="Name" value={fmt(r.caregiver1_name)} />
                                   <Row label="Sex" value={fmt(r.caregiver1_sex)} />
                                   <Row label="Relationship" value={fmt(r.caregiver1_relationship)} />
@@ -683,7 +683,7 @@ export default function LinkedPersonPage() {
                               </div>
                               <div>
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Caregiver 2</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                   <Row label="Name" value={fmt(r.caregiver2_name)} />
                                   <Row label="Sex" value={fmt(r.caregiver2_sex)} />
                                   <Row label="Relationship" value={fmt(r.caregiver2_relationship)} />
@@ -693,7 +693,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Address</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                 <Row label="Address" value={fmt(r.address)} />
                                 <Row label="Phone" value={fmt(r.phone)} />
                                 <Row label="Town/Village" value={fmt(r.town_village)} />
@@ -763,7 +763,7 @@ export default function LinkedPersonPage() {
                           <div className="p-4 space-y-6 text-sm">
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Verification Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Match Case" value={fmt(r.match_case)} />
                                 <Row label="Child Knows Adult" value={fmt(r.child_knows_adult)} />
                                 <Row label="Recognize Photos" value={fmt(r.recognize_photos)} />
@@ -775,7 +775,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Wishes & Recommendation</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Need Info" value={fmt(r.need_info)} />
                                 <Row label="Info Provided" value={fmt(r.info_provided)} />
                                 <Row label="Wants Reunification" value={fmt(r.wants_reunification)} />
@@ -787,7 +787,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Address & Caregiver</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                 <Row label="Current Address" value={fmt(r.current_address)} />
                                 <Row label="Caregiver Name" value={fmt(r.caregiver_name)} />
                                 <Row label="Before Separation Address" value={fmt(r.before_separation_address)} />
@@ -802,7 +802,7 @@ export default function LinkedPersonPage() {
 
                             <div className="pt-4 border-t border-base-200">
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3">Caseworker</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-base-content/60">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-base-content/60">
                                 <div>Name: <strong className="block text-base-content/80 mt-0.5">{fmt(r.caseworker_name)}</strong></div>
                                 <div>Date: <strong className="block text-base-content/80 mt-0.5">{fmtDate(r.caseworker_date)}</strong></div>
                                 <div>Organization: <strong className="block text-base-content/80 mt-0.5">{fmt(r.organization)}</strong></div>
@@ -841,7 +841,7 @@ export default function LinkedPersonPage() {
                           <div className="p-4 space-y-6 text-sm">
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Reporting Metadata</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Reporting Period" value={fmt(r.reporting_period)} />
                                 <Row label="Organization" value={fmt(r.organization)} />
                                 <Row label="County/District/Community" value={fmt(r.county_district_community)} />
@@ -852,7 +852,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Activity Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Activity Date" value={fmtDate(r.activity_date)} />
                                 <Row label="Community Location" value={fmt(r.community_location)} />
                                 <Row label="Target Group" value={fmt(r.target_group)} />
@@ -867,7 +867,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Follow-up & Progress</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Follow-up Type" value={fmt(r.followup_type)} />
                                 <Row label="Next Follow-up Date" value={fmtDate(r.next_followup_date)} />
                                 <Row label="Follow-up Details" value={fmt(r.followup_details)} fullWidth />
@@ -884,7 +884,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Referral Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4">
                                 <Row label="Referral Date" value={fmtDate(r.referral_date)} />
                                 <Row label="Referred By" value={fmt(r.referred_by)} />
                                 <Row label="Receiving Institution" value={fmt(r.receiving_institution)} />
@@ -902,7 +902,7 @@ export default function LinkedPersonPage() {
 
                             <div className="pt-4 border-t border-base-200">
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3">Assessment / Interview Details</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-base-content/60">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-base-content/60">
                                 <div>Institution: <strong className="block text-base-content/80 mt-0.5">{fmt(r.institution_name)}</strong></div>
                                 <div>Location: <strong className="block text-base-content/80 mt-0.5">{fmt(r.location)}</strong></div>
                                 <div>Date/Time: <strong className="block text-base-content/80 mt-0.5">{fmtDate(r.assessment_datetime)}</strong></div>
@@ -956,7 +956,7 @@ export default function LinkedPersonPage() {
                                 <div className="space-y-4">
                                   {r.actions.map((a, i) => (
                                     <div key={i} className="bg-base-200/30 p-3 rounded-lg border border-base-200">
-                                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-2">
+                                      <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3 mb-2">
                                         <Row label="Action Taken" value={fmt(a.action_taken)} />
                                         <Row label="Provider Details" value={fmt(a.provider_details)} />
                                         <Row label="Individual Traced" value={fmt(a.individual_traced)} />
@@ -1017,7 +1017,7 @@ export default function LinkedPersonPage() {
 
                             <div>
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Caregiver & Address</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                 <Row label="Caregiver" value={fmt(r.caregiver_name)} />
                                 <Row label="Relationship" value={fmt(r.caregiver_relationship)} />
                                 <Row label="Phone" value={fmt(r.caregiver_phone)} />
@@ -1049,7 +1049,7 @@ export default function LinkedPersonPage() {
 
                             <div className="pt-4 border-t border-base-200">
                               <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3">Caseworker</h4>
-                              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-base-content/60">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-base-content/60">
                                 <div>Name: <strong className="block text-base-content/80 mt-0.5">{fmt(r.caseworker_name)}</strong></div>
                                 <div>Phone: <strong className="block text-base-content/80 mt-0.5">{fmt(r.caseworker_phone)}</strong></div>
                                 <div>Signature: <strong className="block text-base-content/80 mt-0.5">{fmt(r.caseworker_signature)}</strong></div>
@@ -1061,7 +1061,7 @@ export default function LinkedPersonPage() {
                                 <h4 className="text-xs font-semibold text-base-content/60 uppercase tracking-wider mb-3 border-b border-base-200 pb-1">Closure Approvals</h4>
                                 <div className="space-y-3">
                                   {r.approvals.map((a, i) => (
-                                    <div key={i} className="bg-base-200/30 p-3 rounded-lg border border-base-200 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                    <div key={i} className="bg-base-200/30 p-3 rounded-lg border border-base-200 grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-3">
                                       <Row label="Role" value={fmt(a.role)} />
                                       <Row label="Name" value={fmt(a.name)} />
                                       <Row label="Agency" value={fmt(a.agency)} />

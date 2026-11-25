@@ -213,7 +213,7 @@ export default function MYSServiceProviderForm({ initial = {}, onSaved, onCancel
 
         <div className="mt-4">
           <p className="text-xs font-medium text-base-content/70 mb-2">Select Service Categories:</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-base-200/50 p-4 rounded-lg border border-base-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 bg-base-200/50 p-4 rounded-lg border border-base-300">
             {SERVICE_CATEGORY_CHOICES.map((cat) => (
               <label key={cat.value} className="flex items-center gap-2 text-sm cursor-pointer">
                 <input

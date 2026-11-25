@@ -227,7 +227,7 @@ export default function MYSReferralForm({ initial = {}, onSaved, onCancel }) {
         <h3 className="text-sm font-semibold border-b border-base-300 pb-2 text-base-content/80">Reason for Referral</h3>
         <div className="mt-4">
           <p className="text-xs font-medium text-base-content/70 mb-2">Select applicable categories:</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-base-200/50 p-4 rounded-lg border border-base-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 bg-base-200/50 p-4 rounded-lg border border-base-300">
             {REASON_CHOICES.map((r) => (
               <label key={r.value} className="flex items-center gap-2 text-sm cursor-pointer">
                 <input

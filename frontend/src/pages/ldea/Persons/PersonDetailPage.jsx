@@ -156,7 +156,7 @@ export default function PersonDetailPage() {
         </div>
 
         {/* Key facts strip */}
-        <dl className="grid grid-cols-2 divide-x divide-y divide-base-300 border-t border-base-300 bg-base-200/40 sm:grid-cols-4 sm:divide-y-0">
+        <dl className="grid grid-cols-1 sm:grid-cols-2 divide-x divide-y divide-base-300 border-t border-base-300 bg-base-200/40 sm:grid-cols-4 sm:divide-y-0">
           <Fact label="Age" value={person.age != null ? `${person.age} years` : null} />
           <Fact label="Gender" value={titleCase(person.gender)} />
           <Fact label="Nationality" value={person.nationality} />
@@ -532,7 +532,7 @@ function PersonMOGSummary({ personId }) {
           View full timeline →
         </Link>
       </div>
-      <dl className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-5">
+      <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:grid-cols-5">
         {Object.entries(counts).map(([k, v]) => (
           <div key={k}>
             <dt className="text-[11px] uppercase tracking-wide text-base-content/50">{k}</dt>

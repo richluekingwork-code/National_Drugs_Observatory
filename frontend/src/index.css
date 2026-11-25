@@ -148,6 +148,13 @@
 ========================================= */
 
 @layer base {
+  html,
+  body {
+    /* Guard against accidental horizontal scroll on small screens */
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
   body {
     @apply font-sans antialiased;
     margin: 0;

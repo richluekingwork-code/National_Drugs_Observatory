@@ -105,7 +105,7 @@ export default function SuperAdminPage() {
         </p>
       </header>
 
-      <section aria-label="Summary" className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <section aria-label="Summary" className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-4">
         <StatCard icon={Building2} label="Institutions" value={instLoading ? null : institutions.length} loading={instLoading} hint="Registered agencies" />
         <StatCard icon={Users} label="Users" value={totals.users?.toLocaleString()} loading={instLoading} hint="Across all institutions" />
         <StatCard icon={ShieldCheck} label="Memberships" value={totals.memberships?.toLocaleString()} loading={instLoading} hint="Roles assigned" />
@@ -233,7 +233,7 @@ function InstitutionGrid({ institutions, counts, loading, onOpen }) {
               </div>
             </div>
 
-            <dl className="mt-4 grid grid-cols-2 gap-3 border-t border-base-300 pt-4">
+            <dl className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-base-300 pt-4">
               <div>
                 <dt className="text-[11px] uppercase tracking-wide text-base-content/50">Users</dt>
                 <dd className="text-lg font-semibold tabular-nums">{c.users ?? "—"}</dd>

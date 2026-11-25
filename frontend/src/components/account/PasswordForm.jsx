@@ -160,7 +160,7 @@ function StrengthMeter({ password }) {
 
   return (
     <div className="flex items-center gap-3">
-      <div className="grid flex-1 grid-cols-4 gap-1.5" aria-hidden="true">
+      <div className="grid flex-1 grid-cols-1 sm:grid-cols-4 gap-1.5" aria-hidden="true">
         {[1, 2, 3, 4].map((i) => (
           <span
             key={i}

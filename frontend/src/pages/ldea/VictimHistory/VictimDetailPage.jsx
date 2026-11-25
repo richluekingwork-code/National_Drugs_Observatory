@@ -232,7 +232,7 @@ export default function VictimDetailPage() {
 
         <div className="space-y-4 lg:col-span-2">
           <Card icon={MapPin} title="Incident" tone="warning">
-            <div className="grid grid-cols-2 gap-2 p-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2 lg:grid-cols-4">
               <Tile icon={CalendarClock} label="Date" value={v.incident_date} />
               <Tile icon={Clock} label="Time" value={v.incident_time?.slice(0, 5)} />
               <Tile icon={MapPin} label="County" value={v.incident_county} />

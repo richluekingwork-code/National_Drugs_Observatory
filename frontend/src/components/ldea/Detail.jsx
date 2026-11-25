@@ -92,7 +92,7 @@ const COLS = { 3: "sm:grid-cols-3", 4: "sm:grid-cols-4" };
 
 export function FactStrip({ cols = 4, children }) {
   return (
-    <dl className={"grid grid-cols-2 divide-x divide-y divide-base-300 border-t border-base-300 bg-base-200/40 sm:divide-y-0 " + COLS[cols]}>
+    <dl className={"grid grid-cols-1 sm:grid-cols-2 divide-x divide-y divide-base-300 border-t border-base-300 bg-base-200/40 sm:divide-y-0 " + COLS[cols]}>
       {children}
     </dl>
   );

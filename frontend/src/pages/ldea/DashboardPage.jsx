@@ -101,7 +101,7 @@ export default function DashboardPage() {
       )}
 
       {/* KPI cards */}
-      <section aria-label="Totals" className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+      <section aria-label="Totals" className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
         {STAT_META.map(({ key, label, icon: Icon, to, chip }) => (
           <Link
             key={key}

@@ -80,7 +80,7 @@ export default function CaseDetailPage() {
           )}
         </div>
 
-        <dl className="grid grid-cols-2 divide-x divide-y divide-base-300 border-t border-base-300 bg-base-200/40 sm:grid-cols-4 sm:divide-y-0">
+        <dl className="grid grid-cols-1 sm:grid-cols-2 divide-x divide-y divide-base-300 border-t border-base-300 bg-base-200/40 sm:grid-cols-4 sm:divide-y-0">
           <Fact icon={Building2} label="Court" value={c.court_name} />
           <Fact icon={MapPin} label="County" value={c.county} />
           <Fact icon={CalendarDays} label="Filed" value={formatDate(c.filing_date)} />
